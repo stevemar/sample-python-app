@@ -1,0 +1,7 @@
+# Python dependencies
+
+# Install Instructions:
+# pip3 install -r requirements.txt
+
+flask==1.1.1
+

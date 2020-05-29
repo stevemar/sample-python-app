@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>{{ title if title else 'Hello Python!' }}</title>
+    <!-- <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"> -->
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <div id="root">
+        <!-- Page Content -->
+        {% block container %}{% endblock %}
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- <script src="{{ url_for('static', filename='js/jquery-3.4.1.slim.min.js') }}"></script> -->
+    <!-- <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script> -->
+    <!-- <script src="{{ url_for('static', filename='js/main.js') }}"></script> -->
+</body>
+
+</html>

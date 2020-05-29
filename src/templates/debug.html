@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block container %}
+<div class="pg-debug">
+    <div>
+        <h3>Hello Python</h3>
+        <p>List of environment variables (sys defaults, configs and secrets) set in the app.</p>
+    </div>
+    <div>
+        <table class="pg-debug__table">
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+            {% for cfg in cfg_items %}
+            <tr>
+                <td>{{ cfg.k }}</td>
+                <td>{{ cfg.v }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

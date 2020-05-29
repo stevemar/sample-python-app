@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+  # - - - - - #
+  hello_py:
+    image: local/hello-python:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hello_python
+    restart: "no"
+    ports:
+      - "5001:5001"
+    env_file:
+      - .env.example
+
+  # - - - - - #
+  hello_py_devl:
+    image: local/hello-python:latest-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hello_python_devl
+    restart: "no"
+    working_dir: "/app_devl/" # set working dir to source code vol mount point
+    entrypoint: ["python3", "src/app.py"]
+    ports:
+      - "5001:5001"
+    volumes:
+      - "$PWD:/app_devl/:ro" # mount src code so that we don't have to build container every time during development
+    env_file:
+      - .env.example
+
+# - - - - - - - - - - #
+# Instructions: (for local development and testing)
+
+# Build the container image (use any ONE of the following commands)
+# $ docker-compose build
+# $ docker-compose build --no-cache --pull
+
+# Run the container (use any ONE of the following commands)
+# $ docker-compose up hello_py_devl && docker-compose rm -fsv
+# $ docker-compose up --build hello_py_devl && docker-compose rm -fsv
+# $ docker-compose up --build --force-recreate hello_py_devl && docker-compose rm -fsv
+
+# Stop / remove all the containers created by docker-compose
+# $ docker-compose down
+# $ docker-compose down --rmi all -v --remove-orphans
+
+# Docker compose docs: https://docs.docker.com/compose/
+# - - - - - - - - - - #

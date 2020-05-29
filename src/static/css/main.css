@@ -1,0 +1,63 @@
+/* Global CSS presets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  font-kerning: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* width: 100%; */
+  /* height: 100%; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Styles for debug page */
+.pg-debug {
+  min-width: 100vh;
+  min-height: 100vh;
+  /* width: 100%; */
+  height: 100%;
+  padding: 0px 8px;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  font-size: 12px;
+  text-align: left;
+  color: white; /* white, whitesmoke */
+  background-color: #292929; /* black, #292929 */
+}
+
+.pg-debug h3,
+.pg-debug p {
+  padding: 8px 0px;
+}
+
+.pg-debug__table,
+.pg-debug__table th,
+.pg-debug__table td {
+  max-width: 500px;
+  padding: 4px;
+  border: 1px solid #969393; /* lightgray, #969393 */
+  border-collapse: collapse;
+  word-wrap: break-word;
+}
+
+.pg-debug__table td {
+  color: limegreen; /* limegreen */
+}
+
+.pg-debug__table th {
+  color: greenyellow; /* greenyellow, yellow, #FFEB3B */
+}
