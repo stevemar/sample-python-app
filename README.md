@@ -54,3 +54,9 @@ $ curl http://localhost:5001/debug
 # (or)
 # In Browser visit -> http://localhost:5001/debug/ui
 ```
+
+## Sample output
+
+Pointing your browser to <http://localhost:5001/debug/ui> will bring up the following:
+
+![](images/output.png)
