@@ -14,7 +14,7 @@ def get_app_debug_info():
 @app.route('/')
 def welcome():
     return {
-        'msg': 'Hello World! This is a simple Python app using Flask!',
+        'msg': 'Hello World! This is a simple Python app using Flask! But wait there is more!',
         'endpoints': ['/', '/ping', '/debug', '/debug/ui']
     }
 
