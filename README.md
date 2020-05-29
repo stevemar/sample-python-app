@@ -13,7 +13,7 @@ $ docker run -it -p 5001:5001 --name hello_python hello-python:latest
 # Docker Reference: https://docs.docker.com/reference/
 ```
 
-### Run with Docker Compose
+## Run with Docker Compose
 
 ```bash
 $ docker-compose up hello_py_devl && docker-compose rm -fsv
