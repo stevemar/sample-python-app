@@ -11,6 +11,16 @@ def get_app_debug_info():
     return cfg_items
 
 
+def glenn():
+    from cryptography.hazmat.primitives.asymmetric import dsa
+    from cryptography.hazmat.backends import default_backend
+    private_key = dsa.generate_private_key(
+        key_size=512,
+        backend=default_backend()
+    )
+    return "" 
+
+
 @app.route('/')
 def welcome():
     return {
